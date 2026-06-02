@@ -13,7 +13,7 @@ public abstract class Hazard : MonoBehaviour
 
     // Methods
     public virtual void Activate()
-        // Use virtual so child classes may override the default behaviour if necessary.
+    // Use virtual so child classes may override the default behaviour if necessary.
     {
         isActive = true;
     }
@@ -23,5 +23,5 @@ public abstract class Hazard : MonoBehaviour
         isActive = false;
     }
 
-    public abstract void ApplyEffect(Player player);
+    public abstract void ApplyEffect(Player.Player player); // Fixed type path ambiguity
 }

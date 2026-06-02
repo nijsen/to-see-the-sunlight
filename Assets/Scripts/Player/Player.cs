@@ -1,39 +1,41 @@
 using UnityEngine;
 
-/*
- * Player
- * ------
- * Represents the player entity.
- * Coordinates core player systems including health, movement, modifiers, and view.
- */
-
-public class Player : MonoBehaviour
+namespace Player
 {
-    // Variables
-    public HealthSystem health;
-    public PlayerMovement movement;
-    public ModifierManager modifierManager;
-    public PlayerView playerView;
-
-    // Methods
-    public void TakeDamage(int amount)
+    /*
+     * Player
+     * ------
+     * Represents the player entity.
+     * Coordinates core player systems including health, movement, modifiers, and view.
+     */
+    public class Player : MonoBehaviour
     {
-        if (health != null)
+        // Variables
+        public HealthSystem health;
+        public PlayerMovement movement;
+        public ModifierManager modifierManager;
+        public PlayerView playerView;
+
+        // Methods
+        public void TakeDamage(int amount)
         {
-            health.TakeDamage(amount);
+            if (health != null)
+            {
+                health.TakeDamage(amount);
+            }
         }
-    }    
 
-    public void ApplyModifier(Modifier modifier)
-    {
-        if (modifierManager != null)
+        public void ApplyModifier(Modifier modifier)
         {
-            modifierManager.ApplyModifier(modifier);
+            if (modifierManager != null)
+            {
+                modifierManager.ApplyModifier(modifier);
+            }
         }
-    }
 
-    public void Die()
-    {
-
+        public void Die()
+        {
+            // Add death transition if required
+        }
     }
 }

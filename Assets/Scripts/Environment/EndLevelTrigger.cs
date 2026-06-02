@@ -6,14 +6,14 @@ public class EndLevelTrigger : MonoBehaviour
     // The name of the scene to load when the player reaches the end of the level
     public string nextSceneName;
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Player player = collision.GetComponent<Player>();
+        // Explicitly use the type path to bypass namespace confusion
+        Player.Player player = collision.GetComponent<Player.Player>();
 
         if (player != null)
         {
-            // Checks to see if the next scene exists before goign to load into it
+            // Checks to see if the next scene exists before going to load into it
             if (Application.CanStreamedLevelBeLoaded(nextSceneName))
             {
                 SceneManager.LoadScene(nextSceneName);

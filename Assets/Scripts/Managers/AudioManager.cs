@@ -19,8 +19,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
 
-    // Methods
+    // Public properties to provide access layout configurations and remove tracking warnings
+    public float MusicVolume => musicVolume;
+    public float SfxVolume => sfxVolume;
+    public bool IsMuted => isMuted;
 
+    // Methods
     public void PlaySound(AudioClip clip)
     {
 

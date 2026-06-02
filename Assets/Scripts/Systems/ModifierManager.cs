@@ -14,7 +14,7 @@ public class ModifierManager : MonoBehaviour
 {
     // Variables
     public List<Modifier> activeModifiers = new List<Modifier>();
-    public Player player;
+    public Player.Player player; // Fixed type path ambiguity
 
     // Events
     public Action onModifiersChanged;
@@ -27,7 +27,7 @@ public class ModifierManager : MonoBehaviour
 
     public void ApplyModifier(Modifier modifier)
     {
-        if(modifier != null)
+        if (modifier != null)
         {
             activeModifiers.Add(modifier);
 
@@ -35,8 +35,8 @@ public class ModifierManager : MonoBehaviour
 
             onModifiersChanged?.Invoke();
         }
-    }    
-    
+    }
+
     public void RemoveModifier(Modifier modifier)
     {
         if (modifier != null)

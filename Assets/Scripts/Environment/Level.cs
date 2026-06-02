@@ -15,7 +15,7 @@ public class Level : MonoBehaviour
     [SerializeField] private List<Hazard> hazards;
     [SerializeField] private BiomeMechanic biomeMechanic;
     [SerializeField] private AudioManager audioManager;
-    [SerializeField] private Player player;
+    [SerializeField] private Player.Player player; // Fixed type path ambiguity
     [SerializeField] private Transform spawnPoint;
 
     private LevelManager levelManager;

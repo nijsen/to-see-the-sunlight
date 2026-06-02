@@ -13,7 +13,7 @@ public class PlayerView : MonoBehaviour
     // Variables
     public SpriteRenderer spriteRenderer;
     public List<Modifier> currentEffects = new List<Modifier>();
-    public Player player;
+    public Player.Player player; // Fixed type path ambiguity
     public float visionRadius;
 
     // Methods
