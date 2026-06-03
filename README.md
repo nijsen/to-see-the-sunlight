@@ -147,7 +147,7 @@ Guide the shadow creature to the surface to experience sunlight for the first ti
 
 <!-- PLAY THE GAME -->
 ### Play The Game (Recommended)
-*Build coming soon - project currently in development.*
+*Running the game while moving and double jumping in the background game.*
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
