@@ -70,6 +70,7 @@ My sprint goal for Sprint 2 was adding and including two new features – Double
 To See the Sunlight is a modular 2D platformer engineered around a dynamic card-modifier system. The architectural framework relies on dedicated managers to cleanly separate data, user interface elements, and physics-driven mechanics. This clean separation of concerns ensures that gameplay modifiers seamlessly interact with the player states. 
 
 **Developer:** Nijaya Supun Senarath-Dassanayake
+
 **Role:** Collaborative Team Member (Sprints 0–1) → Solo Core Developer (Sprint 2)
 
 <br />
