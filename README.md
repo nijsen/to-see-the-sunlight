@@ -14,8 +14,9 @@
   
   # To See The Sunlight
   #### *A 2D roguelike vertical platformer*
-  A small shadow creature, having lived its life in darkness deep beneath the earth's surface, begins its ascent toward the light.  
-  Climbing through biome-driven caverns inspired by New Zealand landscapes, the creature must adapt to ever-changing conditions in a valiant attempt to see the sunlight.
+ My sprint goal for Sprint 2 was adding and including two new features – Double Jump and Sprinting, and New Level Implementation.
+ To See the Sunlight is a modular 2D platformer engineered around a dynamic card-modifier system. The architectural framework relies on dedicated managers to cleanly separate data, user interface elements, and physics-driven mechanics. This clean separation of concerns ensures that gameplay modifiers seamlessly interact with the player states. 
+
 
   <!-- DOWNLOAD SHIELD -->
   <a href="https://github.com/tearrabyte/to-see-the-sunlight/releases/latest">
@@ -65,6 +66,13 @@ Each room introduces environmental mechanics that challenge player movement, vis
 
 The journey culminates in the creature's emergence into sunlight.
 
+My sprint goal for Sprint 2 was adding and including two new features – Double Jump and Sprinting, and New Level Implementation.
+To See the Sunlight is a modular 2D platformer engineered around a dynamic card-modifier system. The architectural framework relies on dedicated managers to cleanly separate data, user interface elements, and physics-driven mechanics. This clean separation of concerns ensures that gameplay modifiers seamlessly interact with the player states. 
+
+**Developer:** Nijaya Supun Senarath-Dassanayake
+
+**Role:** Collaborative Team Member (Sprints 0–1) → Solo Core Developer (Sprint 2)
+
 <br />
 
 #### Objective
@@ -105,6 +113,12 @@ Guide the shadow creature to the surface to experience sunlight for the first ti
 * **Audio Design**  
   A combination of custom and sourced audio, including sound effects and music, used to strengthen player feedback and amplify the atmosphere of each biome.
 
+* **My Chosen Feature 1 for Sprint 2 from Nijaya - Double Jump and Sprinting:**  
+  A combination of using explicit tracking constants (maxJumps = 2) reset dynamically by an environment isGrounded circle overlap check. I added this to significantly  enhance game feel, increase player agency, and introduce structural fluidity to core platforming navigation loops.
+
+* **My Chosen Feature 2 for Sprint 2 from Nijaya - New Level Implementation:**  
+  A combination of dedicated trigger zones (OnTriggerEnter2D), cross-scene asset transition handlers, and runtime scene management loops. I added this to transition the codebase from a single test scene into a scalable, multi-stage game sequence.
+
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 
@@ -133,7 +147,7 @@ Guide the shadow creature to the surface to experience sunlight for the first ti
 
 <!-- PLAY THE GAME -->
 ### Play The Game (Recommended)
-*Build coming soon - project currently in development.*
+*Running the game while moving and double jumping in the background game.*
 
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
