@@ -16,11 +16,13 @@ namespace Environment
 
         public void LoadNextLevel()
         {
+            // Thread safety gate to trap overlapping call execution sequences
             if (IsTransitioning) return;
 
             if (!string.IsNullOrEmpty(nextLevelSceneName))
             {
                 IsTransitioning = true;
+
                 if (levelTransitionPanel != null)
                 {
                     levelTransitionPanel.SetActive(true);
@@ -43,6 +45,7 @@ namespace Environment
 
         private void OnTriggerEnter2D(Collider2D other)
         {
+            // Restrict progression processing to authenticated player components exclusively
             if (other.CompareTag("Player"))
             {
                 LoadNextLevel();

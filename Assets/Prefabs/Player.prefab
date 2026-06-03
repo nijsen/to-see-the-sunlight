@@ -153,15 +153,15 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1750533411352022680, guid: 534b88a7cacce614fb8f5b5f0aa30fab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.9, y: 1.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!114 &5485147282771529635
 MonoBehaviour:
@@ -229,13 +229,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 378de95cf3644d74597d27bc5e3657a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  data: {fileID: 11400000, guid: 2c8c159785cc02b4badcc9cc2034e5ba, type: 2}
-  input: {fileID: 8885700745020657126}
-  _groundCheck: {fileID: 357885350630975024}
-  _groundCheckSize: {x: 0.6, y: 0.15}
-  _groundLayer:
+  walkSpeed: 5
+  sprintSpeed: 8
+  jumpForce: 12
+  groundCheckPoint: {fileID: 0}
+  groundCheckRadius: 0.2
+  groundLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
+  spriteRenderer: {fileID: 6648169773348010739}
+  standSprite: {fileID: -1750533411352022680, guid: 534b88a7cacce614fb8f5b5f0aa30fab, type: 3}
+  runSprite: {fileID: -3185392343057510023, guid: fcd9203425ccf9847b1b9016c3bc22f9, type: 3}
+  jumpSprite: {fileID: -5629373429508785278, guid: f037201167d51524b98610816f84bc39, type: 3}
 --- !u!114 &8885700745020657126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +356,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.9, y: 1.06}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 0.9, y: 1.06}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
